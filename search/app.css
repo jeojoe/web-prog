@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  font-family: "arial", helvetica, sans-serif;
+  font-size: 13px;
+  background-color: #eeeded; }
+
+form {
+  width: 100%;
+  text-align: center;
+  padding: 100px 0 20px; }
+  form input {
+    outline: 0;
+    border: none;
+    width: 400px;
+    height: 70px;
+    border-radius: 10px;
+    font-size: 25px;
+    padding: 0 20px;
+    font-weight: 300; }
+
+#search-button {
+  margin: 10px auto;
+  padding: 5px 18px 7px;
+  color: #555;
+  display: block;
+  background: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: box-shadow 0.2s ease-in-out;
+  cursor: pointer; }
+  #search-button:hover {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+
+#result {
+  width: 1240px;
+  margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+  -webkit-column-count: 4;
+  -webkit-column-gap: 10px;
+  -webkit-column-fill: auto;
+  -moz-column-count: 4;
+  -moz-column-gap: 0;
+  -moz-column-fill: auto;
+  column-count: 4;
+  column-gap: 0;
+  column-fill: auto; }
+
+.item {
+  overflow: hidden;
+  display: inline-block;
+  width: 260px;
+  margin: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: box-shadow 0.2s ease-in-out;
+  word-wrap: break-word;
+  border-radius: 2px;
+  padding-bottom: 10px;
+  background-color: #fff; }
+  .item:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+  .item p, .item h3 {
+    padding: 10px 15px; }
+  .item p {
+    margin-top: 5px; }
+  .item h3 {
+    margin: 0; }
+  .item label {
+    padding: 0 15px;
+    display: block;
+    color: #999; }
+  .item a {
+    float: right;
+    margin-right: 15px;
+    text-decoration: none;
+    color: #555; }
+    .item a:hover {
+      color: #222; }
+  .item img {
+    width: 100%; }
+
+hr {
+  border: 1px solid rgba(0, 0, 0, 0.05); }
+
+footer {
+  color: #999;
+  text-align: center;
+  padding: 30px 0; }
+
+/*# sourceMappingURL=app.css.map */

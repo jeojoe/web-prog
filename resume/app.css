@@ -1,0 +1,183 @@
+@font-face {
+  font-family: red-october;
+  src: url("Red October-Regular.ttf"); }
+body {
+  margin: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: red-october; }
+
+.welcome {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 999;
+  color: #fff;
+  text-align: center;
+  padding-top: calc(25% - 100px); }
+  .welcome h3 {
+    margin-bottom: 20px; }
+  .welcome .start-peace {
+    cursor: pointer;
+    padding: 10px 15px;
+    border: 2px solid #fff;
+    width: 215px;
+    margin: 0 auto; }
+    .welcome .start-peace:hover {
+      background-color: #fff;
+      color: #000; }
+
+.rising-sun {
+  width: 3000px;
+  height: 3000px;
+  background-image: url("rising-sun.jpg");
+  background-size: cover;
+  position: fixed;
+  top: calc(-1500px + 100%);
+  left: -1300px;
+  animation: rotate 75s linear infinite;
+  z-index: 0; }
+
+.earth {
+  width: 2500px;
+  height: 2500px;
+  background-image: url("earth.png");
+  background-size: 2500px;
+  position: fixed;
+  bottom: -2250px;
+  left: -300px;
+  animation: rotate 120s linear infinite; }
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg); } }
+.leaders {
+  position: fixed;
+  bottom: -20px;
+  left: -40px;
+  width: 522px;
+  height: 300px;
+  zoom: 1;
+  background-image: url("leaders.png");
+  background-size: cover; }
+  .leaders .leader {
+    height: 275px;
+    cursor: pointer;
+    position: absolute;
+    top: 0; }
+  .leaders .mao {
+    width: 150px;
+    left: 40px; }
+  .leaders .stalin {
+    width: 85px;
+    left: 190px; }
+  .leaders .lenin {
+    width: 85px;
+    left: 275px; }
+  .leaders .marx {
+    width: 145px;
+    left: 360px; }
+  .leaders .quote {
+    width: 430px;
+    height: 300px;
+    position: absolute;
+    top: -370px;
+    left: 70px;
+    background-color: #fff;
+    border-radius: 40px;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.4);
+    z-index: 3;
+    padding: 10px 0px;
+    box-sizing: border-box;
+    line-height: 1.4;
+    border: 5px solid #ffd860; }
+    .leaders .quote .big {
+      font-size: 20px; }
+    .leaders .quote .pointy {
+      position: absolute;
+      bottom: -15px;
+      left: 25px;
+      width: 40px;
+      height: 40px;
+      background-color: #fff;
+      transform: rotate(45deg); }
+
+.main-content {
+  width: 50%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 45%;
+  z-index: 999; }
+
+.name {
+  font-size: 50px;
+  padding-top: 30px;
+  text-shadow: -3px 0 #fff, 0 3px #fff, 3px 0 #fff, 0 -3px #fff; }
+
+.p-1 {
+  font-size: 20px;
+  text-shadow: -2px 0 #fff, 0 2px #fff, 2px 0 #fff, 0 -2px #fff; }
+  .p-1 span {
+    font-size: 36px; }
+
+.detail {
+  position: absolute;
+  top: 180px;
+  left: 0;
+  width: 1200px;
+  height: 1200px;
+  background-image: url("commy-logo.png");
+  background-size: 1200px 1200px;
+  text-shadow: -2px 0 #fff, 0 2px #fff, 2px 0 #fff, 0 -2px #fff; }
+  .detail .box {
+    width: 392px;
+    height: 349px;
+    position: absolute; }
+    .detail .box.background {
+      top: 60px;
+      left: 60px; }
+    .detail .box.skill {
+      top: 60px;
+      left: 790px;
+      transform: rotate(90deg); }
+    .detail .box.exp {
+      top: 600px;
+      left: 975px;
+      transform: rotate(155deg); }
+    .detail .box.interest {
+      top: 700px;
+      left: -60px;
+      transform: rotate(-73deg); }
+    .detail .box ul {
+      list-style: square outside url("bullet.png"); }
+    .detail .box li {
+      line-height: 1.4;
+      margin-top: -4px; }
+
+.nav {
+  text-shadow: -3px 0 #fff, 0 3px #fff, 3px 0 #fff, 0 -3px #fff;
+  font-size: 100px;
+  position: absolute;
+  cursor: pointer;
+  transition: all 0.2s ease-out; }
+  .nav.clock {
+    top: 270px;
+    left: 100%; }
+    .nav.clock:hover {
+      top: 250px; }
+  .nav.couter-clock {
+    top: 600px;
+    left: 100px; }
+    .nav.couter-clock:hover {
+      left: 90px;
+      top: 590px; }
+  .nav:hover {
+    font-size: 140px; }
+
+/*# sourceMappingURL=app.css.map */
