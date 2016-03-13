@@ -5,6 +5,8 @@
 		<title>
 			Assignment 1
 		</title>
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/monokai-sublime.min.css">
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
 		<style type="text/css" media="screen">
 
 			/*css for solar system example*/
@@ -127,217 +129,183 @@
 		<div class="tutorial">
 			<div class="row">
 				<p>1. เริ่มวางโครงสร้างของระบบสุริยะ ด้วยภาษา HTML โดยระบบสุริยะ (อย่างง่ายๆ) ของเราจะประกอบไปด้วยดวงอาทิตย์, ดาวเคราะห์พร้อมเส้นวงโคจร พร้อมจรวดของมนุษยชาติอีก 1 ลำ ใส่ class ให้เป็นตัวแทนอย่างชัดเจน</p>
-				<code>
-					&lt;div class="sun"&gt;&lt;div&gt;<br/>
-					&lt;div class="radius" &gt;<br/>
-						<span class="tab">&lt;div class="earth"&gt;&lt;/div&gt;</span><br/>
-					&lt;/div&gt;<br/>
-					&lt;div class="rocket"&gt;&lt;/div&gt;
-				</code>
+				<pre><code class="html">
+	&lt;div class="sun"&gt;&lt;div&gt;
+	&lt;div class="radius" &gt;
+		&lt;div class="earth"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="rocket"&gt;&lt;/div&gt;
+				</code></pre>
 			</div>
 			<div class="row">
 				<p>2. เริ่มตกแต่งดวงอาทิตย์ โลกและวงโคจรด้วย CSS !</p>
-				<code>
-					.sun { <br/>
-						<span class="tab block">
-							// กำหนดความกว้าง - ยาว<br/>
-							width: 200px;<br/>
-							height: 200px;<br/>
-							<br/>
-							// ทำให้เป็น วงกลม แล้วใส่สีส้ม<br/>
-							border-radius: 50%;<br/>
-							background-color: orange;<br/>
-							<br/>
-							// ทำตำแหน่งให้อยู่ตรงกลางหน้าจอ<br/>
-							position: absolute;<br/>
-							top: calc(50% - 100px);<br/>
-							left: calc(50% - 100px);<br/>
-						</span>
-					} <br/><br/>
-					.radius {<br/>
-						<span class="tab block">
-							width: 500px;<br/>
-							height: 500px;<br/>
-							border-radius: 50%;<br/>
-							position: absolute;<br/>
-							top: calc(50% - 250px);<br/>
-							left: calc(50% - 250px);<br/>
-							<br/>
-							// ใส่สีให้กับวงโคจร<br/>
-							border: 1px solid grey;<br/>
-						</span>
-					} <br/><br/>
-					.earth {<br/>
-						<span class="tab block">
-							width: 60px;<br/>
-							height: 60px;<br/>
-							background-color: blue;<br/>
-							border-radius: 50%;<br/>
-						</span>
-					} <br/><br/>
-					.rocket {<br/>
-						<span class="tab block">
-							// ทำตำแหน่งจรวดให้ fixed ติดหน้าจอ !<br/>
-							position: fixed;<br/>
-							top: 0;<br/>
-							left: 0;<br/>
-							<br/>
-							width: 102px;<br/>
-							height: 200px;<br/>
-							background-color: grey<br/>
-						</span>
-					}
-				</code>
+				<pre><code class="css">
+	.sun {
+		width: 200px;
+		height: 200px;
+		
+		/* ทำให้เป็น วงกลม แล้วใส่สีส้ม*/
+		border-radius: 50%;
+		background-color: orange;
+		
+		/* ทำตำแหน่งให้อยู่ตรงกลางหน้าจอ*/
+		position: absolute;
+		top: calc(50% - 100px);
+		left: calc(50% - 100px);		
+	}
+	.radius {
+		width: 500px;
+		height: 500px;
+		border-radius: 50%;
+		position: absolute;
+		top: calc(50% - 250px);
+		left: calc(50% - 250px);
+		
+		/* ใส่สีให้กับวงโคจร*/
+		border: 1px solid grey;
+	}
+	.earth {
+		width: 60px;
+		height: 60px;
+		background-color: blue;
+		border-radius: 50%;
+	} 
+	.rocket {
+		/* ทำตำแหน่งจรวดให้ fixed ติดหน้าจอ !*/
+		position: fixed;
+		top: 0;
+		left: 0;
+		
+		width: 102px;
+		height: 200px;
+		background-color: grey
+	}
+				</code></pre>
 			</div>
 			<div class="row">
 				<p>3. ใส่รูปให้กับดาวและจรวดผ่านวิธีของ CSS ด้วยการเอา background-color ออก แล้วใส่ background-image พร้อมกำหนดขนาด background-size</p>
-				<code>
-					.sun { <br/>
-						<span class="tab block">
-							width: 200px;<br/>
-							height: 200px;<br/>
-							border-radius: 50%;<br/>
-							position: absolute;<br/>
-							top: calc(50% - 100px);<br/>
-							left: calc(50% - 100px);<br/>
-							<br/>
-							// ใส่รูป<br/>
-							background-image: url(sun.png);<br/>
-							background-size: 200px;<br/>
-						</span>
-					} <br/><br/>
-					.earth {<br/>
-						<span class="tab block">
-							width: 60px;<br/>
-							height: 60px;<br/>
-							border-radius: 50%;<br/>
-							<br/>
-							// ใส่รูป<br/>
-							background-image: url(earth.png);<br/>
-							background-size: 60px;<br/>
-						</span>
-					} <br/><br/>
-					.rocket {<br/>
-						<span class="tab block">
-							position: fixed;<br/>
-							top: 0;<br/>
-							left: 0;<br/>
-							width: 102px;<br/>
-							height: 200px;<br/>
-							<br/>
-							// ใส่รูป<br/>
-							background-image: url(rocket.png);<br/>
-							background-size: 102px 200px;<br/>
-						</span>
-					}
-				</code>
+				<pre><code class="css">
+	.sun { 
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		position: absolute;
+		top: calc(50% - 100px);
+		left: calc(50% - 100px);
+		
+		/* ใส่รูป*/
+		background-image: url(sun.png);
+		background-size: 200px;
+	} 
+	.earth {
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		
+		/* ใส่รูป*/
+		background-image: url(earth.png);
+		background-size: 60px;
+	} 
+	.rocket {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 102px;
+		height: 200px;
+		
+		/* ใส่รูป*/
+		background-image: url(rocket.png);
+		background-size: 102px 200px;
+	}
+				</code></pre>
 			</div>
 			<div class="row">
 				<p>4. ทุกอย่างพร้อมแล้ว เหลือแค่การเคลื่อนไหว! ทำให้ระบบสุริยะเคลื่อนไหวด้วย CSS animation และการสร้าง keyframe</p>
-				<code>
-					.sun { <br/>
-						<span class="tab block">
-							width: 200px;<br/>
-							height: 200px;<br/>
-							border-radius: 50%;<br/>
-							position: absolute;<br/>
-							top: calc(50% - 100px);<br/>
-							left: calc(50% - 100px);<br/>
-							background-image: url(sun.png);<br/>
-							background-size: 200px;<br/>
-							<br/>
-							// ใส่ animation<br/>
-							animation: sunmove 20s infinite;<br/>
-						</span>
-					} <br/><br/>
-					.earth {<br/>
-						<span class="tab block">
-							width: 60px;<br/>
-							height: 60px;<br/>
-							border-radius: 50%;<br/>
-							background-image: url(earth.png);<br/>
-							background-size: 60px;<br/>
-							<br/>
-							// ใส่ animation<br/>
-							animation: earthmove 7s linear infinite;<br/>
-						</span>
-					} <br/><br/>
-					.rocket {<br/>
-						<span class="tab block">
-							position: fixed;<br/>
-							top: 0;<br/>
-							left: 0;<br/>
-							width: 102px;<br/>
-							height: 200px;<br/>
-							background-image: url(rocket.png);<br/>
-							background-size: 102px 200px;<br/>
-							<br/>
-							// ใส่ animation<br/>
-							animation: rocketmove 3s infinite linear;<br/>
-							transform: rotate(30deg);<br/>
-						</span>
-					} <br/><br/>
-					// keyframe ของ sun คือการทำให้ดาวหมุนอยู่กับที่<br/>
-					@keyframes sunmove {<br/>
-			    		<span class="tab block">
-			    			0% {<br/>
-				    			<span class="tab">transform: rotate(0deg);</span><br/>
-				    		}<br/>
-				    		100% {<br/>
-				    			<span class="tab">transform: rotate(360deg);</span><br/>
-				    		}
-			    		</span>
-					} <br/><br/>
-					// keyframe ของ earth คือการทำให้โลกหมุนรอบวงโคจร บนเส้น radius ที่วางไว้<br/>
-					@keyframes earthmove {<br/>
-			    		<span class="tab block">
-			    			0% {<br/>
-				    			<span class="tab block">
-				    				border-radius: 50%;<br/>
-					    			margin-top: 220px;<br/>
-									margin-left: 220px;<br/>
-									<br/>
-									// หลักการคือ สร้าง รัสมี ด้วยการ translate แล้ว rotate ตัวดาวและรัสมีของมัน ในแนวแกน x,y พร้อมกัน ทำให้ดาวดูเหมือนเคลื่อนที่รอบจุดศูนย์กลาง<br/> 
-									transform: rotate(0deg) translate(175px,175px) rotate(0deg);<br/>
-				    			</span>
-				    		}<br/>
-				    		100% {<br/>
-				    			<span class="tab block">
-				    				border-radius: 50%;<br/>
-					    			margin-top: 220px;<br/>
-									margin-left: 220px;<br/>
-									transform: rotate(360deg) translate(175px,175px) rotate(-360deg);<br/>
-				    			</span>
-				    		}
-			    		</span>
-					} <br/><br/>
-					// keyframe ของ rocket คือการทำให้จรวดพุ่งงง<br/>
-					@keyframes  rocketmove {<br/>
-			    		<span class="tab block">
-			    			0% {<br/>
-				    			<span class="tab block">
-				    				margin-left: 0%;<br/>
-									margin-top: calc(100% + 200px);<br/>
-				    			</span>
-				    		}<br/>
-				    		100% {<br/>
-				    			<span class="tab block">
-				    				margin-top: calc(0% - 200px);<br/>
-									margin-left: 70%;<br/>
-				    			</span>
-				    		}
-			    		</span>
-					}
-				</code>
+				<pre><code class="css">
+	.sun { 
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		position: absolute;
+		top: calc(50% - 100px);
+		left: calc(50% - 100px);
+		background-image: url(sun.png);
+		background-size: 200px;
+		
+		/* ใส่ animation*/
+		animation: sunmove 20s infinite;
+	} 
+	.earth {
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		background-image: url(earth.png);
+		background-size: 60px;
+		
+		/* ใส่ animation*/
+		animation: earthmove 7s linear infinite;
+	} 
+	.rocket {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 102px;
+		height: 200px;
+		background-image: url(rocket.png);
+		background-size: 102px 200px;
+		
+		/* ใส่ animation*/
+		animation: rocketmove 3s infinite linear;
+		transform: rotate(30deg);
+	} 
+	/* keyframe ของ sun คือการทำให้ดาวหมุนอยู่กับที่*/
+	@keyframes sunmove {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	} 
+	/* keyframe ของ earth คือการทำให้โลกหมุนรอบวงโคจร บนเส้น radius ที่วางไว้*/
+	@keyframes earthmove {
+		0% {
+				border-radius: 50%;
+    			margin-top: 220px;
+				margin-left: 220px;
+				
+				/* หลักการคือ สร้าง รัสมี ด้วยการ translate แล้ว rotate ตัวดาวและรัสมีของมัน ในแนวแกน x,y พร้อมกัน ทำให้ดาวดูเหมือนเคลื่อนที่รอบจุดศูนย์กลาง */
+				transform: rotate(0deg) translate(175px,175px) rotate(0deg);
+		}
+		100% {
+				border-radius: 50%;
+    			margin-top: 220px;
+				margin-left: 220px;
+				transform: rotate(360deg) translate(175px,175px) rotate(-360deg);
+		}
+	} 
+	/* keyframe ของ rocket คือการทำให้จรวดพุ่งงง*/
+	@keyframes  rocketmove {
+		0% {
+				margin-left: 0%;
+				margin-top: calc(100% + 200px);
+		}
+		100% {
+				margin-top: calc(0% - 200px);
+				margin-left: 70%;
+		}
+	}
+				</code></pre>
 			</div>
 			<div class="row">
 				<p>5. สุดท้าย พาระบบสุริยะที่เราสร้างไปอยู่ในอวกาศด้วย background-image ของ body</p>
-				<code>
-					body {<br/>
-						<span class="tab">background-image: url(space.jpg);<br/>
-					}
-				</code>
+				<pre><code class="css">
+	body {
+		background-image: url(space.jpg);
+	}
+				</code></pre>
 			</div>
 		</div>
+		<script>hljs.initHighlightingOnLoad();</script>
 	</body>
 </html>
