@@ -270,29 +270,29 @@
 	/* keyframe ของ earth คือการทำให้โลกหมุนรอบวงโคจร บนเส้น radius ที่วางไว้*/
 	@keyframes earthmove {
 		0% {
-				border-radius: 50%;
-    			margin-top: 220px;
-				margin-left: 220px;
-				
-				/* หลักการคือ สร้าง รัสมี ด้วยการ translate แล้ว rotate ตัวดาวและรัสมีของมัน ในแนวแกน x,y พร้อมกัน ทำให้ดาวดูเหมือนเคลื่อนที่รอบจุดศูนย์กลาง */
-				transform: rotate(0deg) translate(175px,175px) rotate(0deg);
+			border-radius: 50%;
+			margin-top: 220px;
+			margin-left: 220px;
+			
+			/* หลักการคือ สร้าง รัสมี ด้วยการ translate แล้ว rotate ตัวดาวและรัสมีของมัน ในแนวแกน x,y พร้อมกัน ทำให้ดาวดูเหมือนเคลื่อนที่รอบจุดศูนย์กลาง */
+			transform: rotate(0deg) translate(175px,175px) rotate(0deg);
 		}
 		100% {
-				border-radius: 50%;
-    			margin-top: 220px;
-				margin-left: 220px;
-				transform: rotate(360deg) translate(175px,175px) rotate(-360deg);
+			border-radius: 50%;
+			margin-top: 220px;
+			margin-left: 220px;
+			transform: rotate(360deg) translate(175px,175px) rotate(-360deg);
 		}
 	} 
 	/* keyframe ของ rocket คือการทำให้จรวดพุ่งงง*/
 	@keyframes  rocketmove {
 		0% {
-				margin-left: 0%;
-				margin-top: calc(100% + 200px);
+			margin-left: 0%;
+			margin-top: calc(100% + 200px);
 		}
 		100% {
-				margin-top: calc(0% - 200px);
-				margin-left: 70%;
+			margin-top: calc(0% - 200px);
+			margin-left: 70%;
 		}
 	}
 				</code></pre>
