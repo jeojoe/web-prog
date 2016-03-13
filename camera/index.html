@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="stickerbooth.css"/>
+    <link rel="stylesheet" href="app.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="jQueryRotate.js"></script>
+    <script src="camera.js"></script>
+    <script src="app.js" defer></script>
+    <title>Sticker Booth Yo</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="framing">
+            <canvas id="photo" width="800" height="600"></canvas>
+            <div id="camera"></div>
+            <div id="countdown"></div>
+            <div id="manual-wrapper">
+                <div id="manual">
+                    <div class="item">Yo, ลาก sticker มาแล้วคลิกเพื่อปรับ</div>
+                    <div class="item"><i class="fa fa-arrow-up"></i> เลื่อน sticker ขึ้น</div>
+                    <div class="item"><i class="fa fa-arrow-down"></i> เลื่อน sticker ลง</div>
+                    <div class="item"><i class="fa fa-arrow-left"></i> เลื่อน sticker ซ้าย</div>
+                    <div class="item"><i class="fa fa-arrow-up"></i> เลื่อน sticker ขวา</div>
+                    <div class="item">Shift + <i class="fa fa-arrow-up"></i> เพิ่มขนาด</div>
+                    <div class="item">Shift + <i class="fa fa-arrow-down"></i> ลดขนาด</div>
+                    <div class="item">Shift + <i class="fa fa-arrow-left"></i> หมุนไปทางซ้าย</div>
+                    <div class="item">Shift + <i class="fa fa-arrow-right"></i> หมุนไปทางขวา</div>
+                    <div class="item">Delete ยกเลิกการเลือก</div>
+                    <hr>
+                    <div class="item">เสร็จแล้วอย่าลืมแคปหน้าจอนะครับท่านผู้ใช้งานนนน (โปรแกรมนี้ยังไม่มีระบบบันทึกรูป ต้องขออภัยมา ณ ที่นี้ด้วย สวัสดีครับผม _/\_)</div>
+                    <div class="item">Jirat Onaree</div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div id="camera-control">
+            <button onClick="capture()"><i class="fa fa-camera" id="capture-icon"></i></button>
+        </div>
+        <div id="toolbar">
+            <ul id="sticker-list">
+                <li><img src="sticker/glasses_01.png"/></li>
+                <li><img src="sticker/dognose.png"/></li>
+                <li><img src="sticker/tongue.png"/></li>
+                <li><img src="sticker/eye_01.png"/></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
