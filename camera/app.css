@@ -1,0 +1,23 @@
+#camera-control button:focus {
+  outline: 0; }
+
+#overlay img {
+  cursor: move;
+  position: absolute; }
+  #overlay img.draggable, #overlay img.clicked {
+    border: 2px dotted #fff; }
+
+#manual-wrapper #manual {
+  position: absolute;
+  top: 0;
+  left: -200px;
+  background-color: white;
+  padding: 15px 20px;
+  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.25);
+  max-width: 180px;
+  box-sizing: border-box; }
+  #manual-wrapper #manual .item {
+    text-align: left;
+    padding: 9px 0; }
+
+/*# sourceMappingURL=app.css.map */
