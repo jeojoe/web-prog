@@ -4,7 +4,7 @@
 
 clone then open index.html (yes, that's it)
 
-### description
+### Description
 
 **tutorial**
 
