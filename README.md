@@ -31,4 +31,4 @@ engine using Google Knowledge Graph API.
 
 Instructor wants students to use everything they learned to create the best resume website for
 applying to United Nation for any job position you wish. So i applied to Peace Maker position.
-And here it is lol. (Warning : SACASTIC JOKES ARE STRONG WITH THIS ONE !!)
+And here it is lol. (Warning : SARCASTIC JOKES ARE STRONG WITH THIS ONE !!)
