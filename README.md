@@ -1,5 +1,8 @@
 # web-prog
 
+For final project of the class : https://github.com/nutzaichu/fuqdissheet
+http://fuqdissheet.meteorapp.com/
+
 ### How to
 
 clone then open index.html (yes, that's it)
