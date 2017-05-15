@@ -1,7 +1,8 @@
 # web-prog
 
+<!<!<!<!< HELLO STRANGERRRR >!>!>!>!>
 For final project of the class : https://github.com/nutzaichu/fuqdissheet
-Demo : http://fuqdissheet.meteorapp.com/
+Demo : http://fuqdissheet.now.sh/
 
 ### How to
 
